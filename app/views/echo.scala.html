@@ -1,0 +1,20 @@
+
+@main(title = "WebSocket Server Test -- Play Framework") {
+   <h1>WebSocket Server using the Play Framework</h1>
+   <script>
+   var ws = new WebSocket("ws://"+window.location.host+"/ws");
+   ws.onmessage = function (evt){
+	   console.log(evt.data);
+   }
+   
+   ws.onopen = function(evt){
+	   ws.send("Hello");
+   }
+   
+   ws.onclose = function(evt){
+	   
+   }
+
+   </script>
+    
+}
